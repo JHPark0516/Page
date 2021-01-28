@@ -24,32 +24,25 @@
   text-align: center;
   word-break:break-all;
 }
-
-
-
-
 </style>
 </head>
 <body>
-<div class="gallery">
+<div class="gallery" onclick="javascript:window.close()">
 	<div class="row">
 		<div class="card-body">
 				<div class="text-muted h7 mb-2">
 					작성날짜:  <fmt:formatDate value="${pop.regdate }" pattern="yyyy-MM-dd HH:mm"/></div>
 				<c:if test="${!empty pop.upload }">
-					<a class="card-link" href="#"> <!-- 제목 공간 --> <img
+					<img
 						src="<%=request.getContextPath() %>/upload/${pop.upload}"
 						class="img-fluid img-thumbnail" />
-					</a>
 				</c:if>
 				<p class="desc">${pop.content }</p>
 			</div>
-			<div class="card-footer">
-			
-			</div>
-		</div>
-		
-	</div>
+	 </div>
 </div>
+	
+
+
 </body>
 </html>
