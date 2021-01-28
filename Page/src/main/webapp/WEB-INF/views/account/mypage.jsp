@@ -36,10 +36,10 @@ body {
 	content: none;
 	display: none;
 }
-
-.img-fluid{
- max-width: 100 %;
-  height: auto ;
+/* 수정함 */
+.img-fluid1{
+ max-width: 100%;
+  height: 168px ;
   }
 body {
 	background: #f8f9fa;;
@@ -218,8 +218,8 @@ body {
 					<!-- END MENU -->
 				</div>
 			</div>
-			<div class="col-md-9">
-				<div class="profile-content">
+			<div class="col-md-9 profile-content">
+				
 					<div class="col">
 						<!-- 리스트 -->
 						<article class="my-3 mx-5">
@@ -234,16 +234,12 @@ body {
 						<ul>
 							<c:forEach var="a" items="${board}" varStatus="status">
 							<li class="mylist">
-								<div class="card gedf-card"  style="position:unset;" onclick="test(${a.no})">
-									
-									
+								<div class="card gedf-card"  style="position:unset;" onclick="test(${a.no})">	
 									<div class="card-body">
-										<div class="text-muted h7 mb-2">
-											<i class="fa fa-clock-o"></i>${a.regdate }</div>
 										<c:if test="${!empty a.upload }">
 											<a class="card-link" href="#"> <!-- 제목 공간 --> <img
 												src="<%=request.getContextPath() %>/upload/${a.upload}"
-												class="img-fluid" />
+												class="img-fluid1" />
 											</a>
 										</c:if>
 										<c:if test="${empty a.upload }">
@@ -260,7 +256,7 @@ body {
 					</div>
 				</div>
 			</div>
-		</div>
+		
 	</div>
 	<center>
 		<strong>footer </strong>

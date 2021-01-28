@@ -12,7 +12,7 @@
 <style>
 .img-fluid{
 	width: 100%;
-	height: auto;
+	height: 370px;
 }
 .gallery {
   margin: 5px;
@@ -22,6 +22,7 @@
 .desc {
   padding: 15px;
   text-align: center;
+  word-break:break-all;
 }
 
 
@@ -34,7 +35,7 @@
 	<div class="row">
 		<div class="card-body">
 				<div class="text-muted h7 mb-2">
-					<fmt:formatDate value="${pop.regdate }" pattern="yyyy-MM-dd HH:mm"/></div>
+					작성날짜:  <fmt:formatDate value="${pop.regdate }" pattern="yyyy-MM-dd HH:mm"/></div>
 				<c:if test="${!empty pop.upload }">
 					<a class="card-link" href="#"> <!-- 제목 공간 --> <img
 						src="<%=request.getContextPath() %>/upload/${pop.upload}"
