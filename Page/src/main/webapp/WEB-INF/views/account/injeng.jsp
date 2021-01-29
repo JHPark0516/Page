@@ -68,7 +68,7 @@ function check(){
 					data:{"email":email},
 					success: function(data){
 						alert("인증완료!");
-						location.href="login.jsp"
+						location.href="login.do"
 					
 					}
 				});

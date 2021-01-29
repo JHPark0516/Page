@@ -458,12 +458,12 @@ service.insert(dto);
 				mail.setHostName("smtp.naver.com");
 				mail.setSmtpPort(587);
 				
-				mail.setAuthentication("aw1530@naver.com", "page1530"); //관리자 이메일 비밀번호
+				mail.setAuthentication("ax1530@naver.com", "lovelyz141114"); //관리자 이메일 비밀번호
 				mail.setTLS(true);
 				mail.addTo(dto.getEmail(), "utf-8");// 받는사람 메일
-				mail.setFrom("aw1530@naver.com", "운영자", "utf-8");	//보내는 메일
+				mail.setFrom("ax1530@naver.com", "운영자", "utf-8");	//보내는 메일
 				mail.setSubject("인증번호 발송");
-				mail.setHtmlMsg("<p align = 'center'>이메일 인증번호</p><br>"+"<p align = 'center'>인증번호 :</p>" + keys);			
+				mail.setHtmlMsg("<p align = 'center'>이메일 인증번호</p><br>"+"<p>인증번호 :</p>" + keys);			
 				mail.send();
 				
 			}catch(Exception e) {
