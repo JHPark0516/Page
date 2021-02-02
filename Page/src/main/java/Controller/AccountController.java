@@ -458,10 +458,10 @@ service.insert(dto);
 				mail.setHostName("smtp.naver.com");
 				mail.setSmtpPort(587);
 				
-				mail.setAuthentication("ax1530@naver.com", "lovelyz141114"); //관리자 이메일 비밀번호
+				mail.setAuthentication("", ""); //관리자 이메일 비밀번호
 				mail.setTLS(true);
 				mail.addTo(dto.getEmail(), "utf-8");// 받는사람 메일
-				mail.setFrom("ax1530@naver.com", "운영자", "utf-8");	//보내는 메일
+				mail.setFrom("", "운영자", "utf-8");	//보내는 메일
 				mail.setSubject("인증번호 발송");
 				mail.setHtmlMsg("<p align = 'center'>이메일 인증번호</p><br>"+"<p>인증번호 :</p>" + keys);			
 				mail.send();
@@ -618,10 +618,10 @@ service.insert(dto);
 			String charSet = "utf-8";
 			String hostSMTP = "smtp.naver.com";
 			String hostSMTPid = "";		// id
-			String hostSMTPpwd = ")"; 	// 鍮꾨�踰덊샇
+			String hostSMTPpwd = ""; 	// 비밀번호
 
 			
-			String fromEmail = "";	// 蹂대궡�뒗 硫붿씪紐�
+			String fromEmail = "";	// 보낼 이메일
 			String fromName = "page 관리자";
 			
 			String subject = null;
